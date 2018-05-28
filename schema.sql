@@ -14,7 +14,7 @@ create table series (
 	foreign key (pid) references publisher(pid)
 );
 create table issue (
-	iid integer primary key autoincrement,
+	iid text primary key not null,
 	sid integet not null,
 	inum integer not null,
 	pdate text not null,
@@ -40,3 +40,4 @@ insert into publisher (pname) values ("Action Lab Comics");
 insert into publisher (pname) values ("Bongo Comics");
 insert into publisher (pname) values ("Devil's Due/1First Comics");
 insert into publisher (pname) values ("UDON Entertainment");
+insert into publisher (pname) values ("Valiant Entertainment");
